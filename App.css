@@ -1,0 +1,836 @@
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.landing{
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-image: url('/public/LandingBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing h1{
+    display: flex;
+    font-family: 'DM Serif Display', serif;
+    font-weight:800;
+    font-size: 50px;
+    color: #1d3120;
+}   
+
+.landing h2{
+    display: flex;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+    font-size: 28px;
+    color: #263528;
+} 
+
+.landing .land-buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    padding: 5px;
+}
+
+.land-buttons button{
+    display: flex;
+    padding:8px 20px 8px 20px;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.land-buttons .srch{
+    background-color: #dae764;  
+    color: rgb(8, 126, 8);
+    border-color:#dae764;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.land-buttons .srch:hover{
+    background-color: #e5ee94;
+    transform: scale(1.08);
+}
+
+.land-buttons .like{
+    background-color: #eee42c;
+    color: rgb(8, 126, 8);
+    border-color:#eee42c;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.land-buttons .like:hover{
+    background-color: #e5ee94;
+    border-color: #e5ee94;
+}
+
+.landing .land-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.land-cards .land-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color:#ffffe5;
+    border: 1px solid #dae764;
+    border-radius: 5px;
+    padding: 8px 14px 8px 14px;
+
+}
+.land-card:hover{
+  border-color: #eee42c;
+  border-width: 2px;
+}
+
+.land-card p{
+    color: #263528;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin-top: -10px;
+}
+
+.land-card .land-icon{
+    margin-top: 20px;
+    margin-bottom: -15px;
+    font-size: 18px;
+    width: 32px;
+    height: 28px;
+    padding: 6px;
+    background-color:#eee42c;
+    border-radius: 50px;
+}
+
+
+.main-page{
+ min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 30% 30%,
+    #f9f9d0 0%,
+    #ffffe5 40%,
+    #e5ee94 80%
+  );
+  padding: 20px
+}
+
+
+.head-logo{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.head-logo .logo{
+  width: 350px;
+}
+
+.home-bar{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 10px;
+  align-items: center;
+  color: #1d3120;
+  font-family: 'DM Serif Display', serif;
+}
+
+.home-bar button{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 0px 10px 0px 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  background-color: #eee42c;
+  color: rgb(8, 126, 8);
+  border-color:#eee42c;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #eee42c;
+  height: 40px;
+  align-items: center;
+}
+
+.home-bar button:hover{
+   background-color: #e5ee94;
+    border-color: #e5ee94;
+}
+
+.search-bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-bar .search{
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  text-align: center;
+  align-items: center;
+  padding: 5px 8px 5px 8px;
+  border: 1px solid #dae764;
+  border-radius: 5px;
+  width: 380px;
+  height: 30px;
+  font-family: 'Inter', sans-serif;
+  color: #263528;
+}
+
+.search-bar .search:focus-within{
+  outline: #dae764;
+  border-width: 2px;
+
+}
+
+.search input{
+  display: flex;
+  border: none;
+  background-color: #f9f9d0;
+  width: 380px;
+  height: 30px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.search input:focus{
+  outline: none;
+  box-shadow: none;
+}
+.search-bar .search-button{
+  background-color: #eee42c;
+  color: rgb(8, 126, 8);
+  border-color: #dae764;
+  transition: background-color 0.3s ease-in-out;
+  padding: 6px 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  height: 40px;
+}
+
+.filters{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  
+}
+
+.filters select{
+  display: flex;
+  padding: 3px 10px 3px 10px;
+  background-color: #dae764;
+  border-color: #dae764;
+  border-radius: 5px;
+  color:rgb(8, 126, 8);
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+.filters select:focus-within{
+  border-color: rgb(8, 126, 8);
+  border-width: 2px;
+  cursor: pointer;
+}
+
+.remove-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee42c;
+  border: 1px solid #eee42c;
+  border-radius: 5px;
+  padding: 4px 10px 4px 10px;
+  color: rgb(8, 126, 8);
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+
+.remove-filter:hover{
+  transform: scale(1.03);
+  background-color: #dae764;
+}
+
+
+.results-section .sorry-msg{
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: italic;
+  color:#1d3120;
+}
+.results-section{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:20px;
+  margin: 30px;
+}
+
+.meal-card{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  height: 410px;
+  text-align: center;
+  background-color: #e5ee94;
+  border: 1px inset #dae764;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.meal-card:hover{
+  transform: scale(1.04);
+}
+
+.meal-card img{
+  display: flex;
+  height: 240px;
+  object-fit: cover;
+}
+
+.meal-card h3{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'DM Serif Display', serif;
+  font-weight: bold;
+  font-size: 22px;
+  color: #1d3120;
+  margin-bottom: 0px;
+}
+
+.meal-card .card-feat{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 550;
+  font-size: 13px;
+  gap: 10px;
+} 
+
+.card-feat p{
+  display: flex;
+  padding: 3px 10px 3px 10px;
+  background-color: #ffffe5;
+  border-radius: 10px;
+}
+
+.details-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 8px 5px 8px;
+  margin: 0px auto;
+  background-color: #eee42c;
+  border: 1px inset #eee42c;
+  border-radius: 10px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 550;
+  color: rgb(8, 126, 8);
+  cursor: pointer;
+}
+
+.fav-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 5px 8px 5px 8px;
+  margin: 0px auto;
+  background-color:#ffffe5;
+  border: 1px solid #ffffe5;
+  color: #263528;
+  font-size: 16px;
+  font-weight: bolder;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.fav-btn:hover{
+  background-color: #dae764;
+  border-color: #dae764;
+}
+
+.favorites-pg{
+ min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 30% 30%,
+    #f9f9d0 0%,
+    #ffffe5 40%,
+    #e5ee94 80%
+  );
+  padding: 20px
+}
+
+.details-pg{
+ min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 30% 30%,
+    #f9f9d0 0%,
+    #ffffe5 40%,
+    #e5ee94 80%
+  );
+  padding: 20px
+}
+
+.display-box{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.display-box-left, .display-box-right{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.display-box-left{
+  justify-content:flex-start;
+  align-items: center;
+}
+.img-display{
+  width: 400px;
+  height: 350px;
+}
+
+.features{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.features p{
+  background-color: #dae764;
+  border: 1px solid #dae764;
+  padding: 5px 12px 5px 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  color:#1d3120;
+  font-family: 'DM Serif Display', sans-serif;
+  font-size: 15px;
+}
+
+.video{
+  width: 400px;
+  height: 350px;
+}
+
+.display-box-right .video-con h2{
+  font-family: 'DM Serif Display', sans-serif;
+  color: #1d3120;
+  font-size: 28px;
+  margin-bottom: 0px;
+}
+
+.ingredient-list {
+  list-style-type: square;
+  color: #263528;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.instruction{
+  color: #263528;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #dae764;
+  border-top: 4px solid #1d3120;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container p {
+  font-family: 'Inter', sans-serif;
+  color: #263528;
+}
+
+
+@media (max-width: 1280px) {
+  .results-section {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px;
+    margin: 25px;
+  }
+
+  .meal-card {
+    width: 100%;
+    height: auto;
+  
+  }
+
+  .meal-card img {
+    height: 220px;
+  }
+
+  .search-bar .search,
+  .search input {
+    width: 100%;
+  }
+
+  .home-bar button,
+  .search-bar .search-button,
+  .filters select,
+  .remove-filter {
+    width: fit-content;
+  }
+
+  .details-btn{
+    margin-bottom: 10px;
+  }
+
+  .display-box {
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img-display,
+  .video {
+    width: 300px;
+    height: 260px;
+  }
+
+  .features {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .features p {
+    font-size: 13px;
+    padding: 4px 10px;
+    margin-top: 15px;
+  }
+
+  .display-box-right .video-con h2 {
+    font-size: 24px;
+  }
+
+  .ingredient-list,
+  .instruction {
+    font-size: 13px;
+  }
+
+  .card-feat p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .head-logo{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.head-logo .logo{
+  width: 300px;
+}
+
+  .landing {
+    padding: 20px 10px;
+  }
+
+  .landing h1 {
+    font-size: 32px;
+    text-align: center;
+    flex-wrap: wrap;
+  }
+
+  .landing h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+    .land-buttons button {
+    font-size: 15px;
+    padding: 6px 16px;
+  }  
+
+  .landing .land-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .land-cards .land-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .results-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 16px;
+    margin: 20px;
+  }
+
+  .meal-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .meal-card img {
+    height: 200px;
+  }
+
+  .search-bar .search,
+  .search input {
+    width: 90%;
+  }
+
+  .home-bar button,
+  .search-bar .search-button,
+  .filters select,
+  .remove-filter {
+    width: fit-content;
+  }
+
+  .meal-card h3 {
+    font-size: 18px;
+  }
+
+  .card-feat p {
+    font-size: 12px;
+    padding: 2px 8px;
+  }
+
+   .display-box {
+    gap: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .img-display,
+  .video {
+    width: 250px;
+    height: 220px;
+  }
+
+  .features {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .features p {
+    font-size: 12px;
+    padding: 3px 8px;
+    margin-top: 10px;
+  }
+
+  .display-box-right .video-con h2 {
+    font-size: 20px;
+  }
+
+  .ingredient-list,
+  .instruction {
+    font-size: 12px;
+  }
+
+  .card-feat p {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .landing h1 {
+    font-size: 26px;
+  }
+
+  .landing h2 {
+    font-size: 18px;
+  }
+
+  .land-buttons button {
+    font-size: 15px;
+    padding: 6px 16px;
+  }
+
+  .land-card p {
+    font-size: 13px;
+  }
+
+  .land-buttons button {
+    font-size: 13px;
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  
+   .head-logo .logo{
+    width: 200px;
+  }
+
+  .results-section {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 15px;
+  }
+
+  .meal-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .meal-card img {
+    height: 180px;
+  }
+
+  .meal-card h3 {
+    font-size: 16px;
+  }
+
+  .card-feat {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .card-feat p {
+    font-size: 11px;
+    padding: 2px 6px;
+  }
+
+  .details-btn,
+  .fav-btn {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  .home-bar{
+    flex-direction: row;
+  }
+
+  .search-bar, .filters {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search-bar .search,
+  .search input {
+    width: 100%;
+  }
+
+   .display-box {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .img-display,
+  .video {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .features {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+
+  .features p {
+    font-size: 11px;
+    padding: 4px 10px;
+    margin-top: 8px;
+  }
+
+  .display-box-right .video-con h2 {
+    font-size: 18px;
+  }
+
+  .ingredient-list {
+    list-style-type: none;
+    text-align: left;
+  }
+  .ingredient-list,
+  .instruction {
+    font-size: 12px;
+  }
+
+  .card-feat p {
+    font-size: 12px;
+  }
+
+  .display-box-left,
+  .display-box-right {
+    align-items: center;
+    text-align: center;
+  }
+
+  .instruction {
+    text-align: justify;
+  }
+}
